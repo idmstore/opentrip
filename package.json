@@ -1,0 +1,22 @@
+{
+  "name": "opentrip",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Open Trip Booking Platform monorepo",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md,prisma,yml,yaml}\"",
+    "db:generate": "pnpm --filter @opentrip/api prisma:generate",
+    "db:migrate": "pnpm --filter @opentrip/api prisma:migrate",
+    "db:studio": "pnpm --filter @opentrip/api prisma:studio"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2"
+  }
+}
